@@ -8,7 +8,7 @@
 			echo "null submission";
 		}
 		else{
-			echo "sucssfully submit";
+			echo "Name: ".$name;
 		}
 	}else{
 		echo "Invalid request";
