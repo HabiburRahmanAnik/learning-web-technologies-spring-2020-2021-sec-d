@@ -1,3 +1,8 @@
+<?php
+	session_start();
+	if(isset($_SESSION['status'])){
+
+?>
  <!DOCTYPE html>
 <html>
 <head>
@@ -36,3 +41,11 @@
 	</table>
 </body>
 </html>
+
+<?php
+	}
+	else
+	{
+		header('location:login.html');
+	}
+?>
