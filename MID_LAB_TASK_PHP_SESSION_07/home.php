@@ -14,7 +14,7 @@
 			</td>
 
 			<td align="right">
-			<a href="home.html">Home</a>|
+			<a href="#">Home</a>|
 			<a href="login.html">Login</a>|
 			<a href="registration.html">Registration</a>
 			</td>
@@ -23,7 +23,7 @@
 	<hr>
 	<table>
 		<tr height="200px">
-			<td colspan="2"><h2>Welcome xCompany</h2></td>
+			<td colspan="2"><h2>Welcome to xCompany</h2></td>
 		</tr>
 	</table>
 	<hr>
