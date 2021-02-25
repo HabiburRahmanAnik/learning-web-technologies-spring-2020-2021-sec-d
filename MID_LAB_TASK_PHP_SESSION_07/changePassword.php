@@ -25,7 +25,7 @@
 	 			<ul>
 	 				<li><a href="dashboard.php">Dashboard</a></li>
 	 				<li><a href="viewProfile.php">View Profile</a></li>
-	 				<li><a href="editProfile.html">Edit Profile</a></li>
+	 				<li><a href="editProfile.php">Edit Profile</a></li>
 	 				<li><a href="profilePicture.php">Chnage Profile Picture</a></li>
 	 				<li><a href="changePassword.html">Change Password</a></li>
 	 				<li><a href="logout.html">Logout</a></li>

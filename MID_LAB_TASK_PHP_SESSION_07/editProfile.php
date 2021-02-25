@@ -1,7 +1,13 @@
+<?php
+   session_start();
+   if (isset($_SESSION['status'])) {
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>View Profile</title>
+	<title>Edit Profile</title>
 </head>
 <body>
 
@@ -20,14 +26,14 @@
 	 			<ul>
 	 				<li><a href="dashboard.php">Dashboard</a></li>
 	 				<li><a href="viewProfile.php">View Profile</a></li>
-	 				<li><a href="editProfile.html">Edit Profile</a></li>
+	 				<li><a href="#">Edit Profile</a></li>
 	 				<li><a href="profilePicture.php">Chnage Profile Picture</a></li>
 	 				<li><a href="changePassword.php">Change Password</a></li>
 	 				<li><a href="logout.php">Logout</a></li>
 	 			</ul>
 	 		</td>
 	 		<td>
-	 			<from>
+	 			<from method="post" action="profileCheck.php">
 	 			<fieldset>
 	 				<legend>PROFILE</legend>
 	 					Name: <input type="text" name="name" value="">
@@ -53,3 +59,10 @@
 	</table>
 </body>
 </html>
+<?php
+
+	}else{
+		header('location:login.html');
+	}
+
+?>
