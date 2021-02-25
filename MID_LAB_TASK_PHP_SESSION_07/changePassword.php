@@ -1,3 +1,8 @@
+
+<?php
+   session_start();
+   if (isset($_SESSION['status'])) {
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,18 +15,18 @@
  			<td width="400px"><img src="images/logo.png"></td>
  			<td align="right">
  				Logged in as
- 				<a href="#">Bob</a>|
- 				<a href="#">Logout</a>
+ 				<a href="#"><?php $name=$_SESSION['user']; echo $name['username']; ?></a>|
+ 				<a href="logout.php">Logout</a>
  			</td>
 	 	</tr>
 	 	<tr height="300px">
 	 		<td>
 	 			Account
 	 			<ul>
-	 				<li><a href="dashboard.html">Dashboard</a></li>
-	 				<li><a href="viewProfile.html">View Profile</a></li>
+	 				<li><a href="dashboard.php">Dashboard</a></li>
+	 				<li><a href="viewProfile.php">View Profile</a></li>
 	 				<li><a href="editProfile.html">Edit Profile</a></li>
-	 				<li><a href="profilePicture.html">Chnage Profile Picture</a></li>
+	 				<li><a href="profilePicture.php">Chnage Profile Picture</a></li>
 	 				<li><a href="changePassword.html">Change Password</a></li>
 	 				<li><a href="logout.html">Logout</a></li>
 	 			</ul>
@@ -33,7 +38,7 @@
 				<table>
 					<tr>
 						<td>Current Password:</td>
-						<td><input type="Password" name="currenttPass" value=""></td>
+						<td><input type="Password" name="currentPass" value=""></td>
 					</tr>
 					<tr>
 						<td>New Password</td>
@@ -58,3 +63,9 @@
 	</table>
 </body>
 </html>
+<?php
+	}
+	else{
+		header('location: login.html');
+	}
+?>

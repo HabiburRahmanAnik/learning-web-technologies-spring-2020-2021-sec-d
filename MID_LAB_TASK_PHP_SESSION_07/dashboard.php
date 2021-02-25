@@ -15,8 +15,15 @@
  			<td width="100px"><img src="images/logo.png"></td>
  			<td align="right">
  				Logged in as
- 				<a href="#">Bob</a>|
- 				<a href="#">Logout</a>
+ 				<a href="#">
+ 				<?php  
+ 					$name=$_SESSION['username'];
+ 					echo $name;
+
+ 				?>
+ 					
+ 				</a>|
+ 				<a href="logout.php">Logout</a>
  			</td>
 	 	</tr>
 	 	<tr height="200px">
@@ -24,14 +31,17 @@
 	 			Account
 	 			<ul>
 	 				<li><a href="#">Dashboard</a></li>
-	 				<li><a href="viewProfile.html">View Profile</a></li>
+	 				<li><a href="viewProfile.php">View Profile</a></li>
 	 				<li><a href="editProfile.html">Edit Profile</a></li>
-	 				<li><a href="profilePicture.html">Chnage Profile Picture</a></li>
-	 				<li><a href="changePassword.html">Change Password</a></li>
+	 				<li><a href="profilePicture.php">Chnage Profile Picture</a></li>
+	 				<li><a href="changePassword.php">Change Password</a></li>
 	 				<li><a href="logout.html">Logout</a></li>
 	 			</ul>
 	 		</td>
-	 		<td><h3>Welcome Bob</h3></td>
+	 		<td><h3>Welcome <?php  
+ 					$name=$_SESSION['username'];
+ 					echo $name;
+ 				?></h3></td>
 	 	</tr>
 		<tr height="50px">
 			<td colspan="3" align="center">

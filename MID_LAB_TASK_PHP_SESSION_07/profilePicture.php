@@ -1,7 +1,13 @@
+<?php
+	session_start();
+	if(isset($_SESSION['status'])){
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>View Profile</title>
+	<title>Change Profile Picture</title>
 </head>
 <body>
 
@@ -10,19 +16,19 @@
  			<td width="400px"><img src="images/logo.png"></td>
  			<td align="right">
  				Logged in as
- 				<a href="#">Bob</a>|
- 				<a href="#">Logout</a>
+ 				<a href="#"><?php $name=$_SESSION['user']; echo $name['username']; ?></a>|
+ 				<a href="logout.php">Logout</a>
  			</td>
 	 	</tr>
 	 	<tr height="300px">
 	 		<td>
 	 			Account
 	 			<ul>
-	 				<li><a href="dashboard.html">Dashboard</a></li>
-	 				<li><a href="viewProfile.html">View Profile</a></li>
+	 				<li><a href="dashboard.php">Dashboard</a></li>
+	 				<li><a href="viewProfile.php">View Profile</a></li>
 	 				<li><a href="editProfile.html">Edit Profile</a></li>
-	 				<li><a href="profilePicture.html">Chnage Profile Picture</a></li>
-	 				<li><a href="changePassword.html">Change Password</a></li>
+	 				<li><a href="#">Chnage Profile Picture</a></li>
+	 				<li><a href="changePassword.php">Change Password</a></li>
 	 				<li><a href="logout.html">Logout</a></li>
 	 			</ul>
 	 		</td>
@@ -31,14 +37,17 @@
 	 			<fieldset>
 	 				<legend>PROFILE</legend>
 	 				<table>
-
 	 					<tr>
-	 						<td align="right"><img src="images/user.png" width="100px" height="100px"></td>
+	 						<td><img src="images/user.png" width="100px" height="100px"></td>
 	 					</tr>
 	 					<tr>
-	 						<td align="right"><a href="profilePicture.html">change</a></td>
+	 						<td>
+	 							<input type="file" name="img">
+	 						</td>
 	 					</tr>
 	 				</table>
+	 				<hr>
+	 				<input type="submit" name="submit" value="submit">
 	 			</fieldset>
 	 		</from>
 	 		</td>
@@ -51,3 +60,10 @@
 	</table>
 </body>
 </html>
+
+<?php
+	}
+	else{
+		header('location: login.html');
+	}
+?>

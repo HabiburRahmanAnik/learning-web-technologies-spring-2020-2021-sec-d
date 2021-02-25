@@ -16,7 +16,9 @@
 			$user=$_SESSION['user'];
 			if($username == $user['username'] && $password == $user['password'])
 			{
-				$_SESSION['status']=true;
+				$_SESSION['username'] = $username;
+				$_SESSION['status'] = true;
+
 				header('location: dashboard.php');
 			}
 			else
