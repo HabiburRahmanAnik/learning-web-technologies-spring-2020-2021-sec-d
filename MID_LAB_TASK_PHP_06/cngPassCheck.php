@@ -4,20 +4,23 @@
  		$newPass=$_POST['newPass'];
  		$retypePass=$_POST['retypePass'];
 
- 		if ($currenttPass=="" || $newPass="" || $retypePass="") {
+ 		if (empty($currenttPass) || empty($newPass) || empty($retypePass)) {
  			echo "Null submossion";
- 			
- 		}else if ($currenttPass == $newPass) {
- 			echo "new password and old password can't be same"; 
-
- 		}else if($newPass != $retypePass) {
- 			echo "password doesn't match";
-
- 		}else{
- 			echo "login successfully";
-  	 		}
+ 		}
+ 		elseif($currenttPass == $newPass)
+ 		{
+ 			echo "current and new password must be different";
+ 		}
+ 		elseif($newPass != $retypePass)
+ 		{
+ 			echo "new password and re-type password doesn't match";
+ 		}
+ 		else
+ 		{
+ 			echo "Password change successfully";	
  		}
 
+ 	}
 
-
+ 		
 ?>
