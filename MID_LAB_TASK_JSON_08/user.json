@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Adnan Anik",
+        "email": "anik26452@gmail.com",
+        "username": "Adnananik",
+        "password": "123",
+        "conPass": "123",
+        "gender": "male",
+        "day": "3",
+        "month": "8",
+        "year": "1999"
+    },
+    {
+        "name": "Md.Habibur Rahman",
+        "email": "habib264521@gmail.com",
+        "username": "habib",
+        "password": "234",
+        "conPass": "234",
+        "gender": "male",
+        "day": "7",
+        "month": "2",
+        "year": "1999"
+    },
+    {
+        "name": "Muaz",
+        "email": "muaz@gmail.com",
+        "username": "muaz",
+        "password": "123",
+        "conPass": "123",
+        "gender": "male",
+        "day": "8",
+        "month": "4",
+        "year": "2000"
+    }
+]
