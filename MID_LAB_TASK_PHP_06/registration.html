@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,4 +54,61 @@
 		</fieldset>
 	</form>
 </body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<form method="post" action="regCheck.php">
+		<fieldset>
+			<legend>REGISTRATION</legend>
+			Name: <input type="text" name="name" value="" ><hr>
+			Email: <input type="email" name="email" value="" ><hr>
+			Username:<input type="text" name="username" value="" ><hr>
+			Password: <input type="Password" name="password" value="" >
+			<hr>
+			Confirm Password: <input type="password" name="conpass" value="" >
+			<fieldset >
+				<legend>Gender</legend>
+				<input type="radio" name="gender" value="male">Male
+				<input type="radio" name="gender" value="female">Female
+				<input type="radio" name="gender" value="other">Other
+			</fieldset>
+			<fieldset>
+				<legend><b>Date Of Birth</b></legend>
+					<table>
+						<tr>
+							<td>
+								<i>dd</i>
+							</td>
+							<td>
+								<i>mm</i>
+							</td>
+							<td>
+								<i>yy</i>
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<input type="text" size="10" name="day" value="">/
+							</td>
+							<td>
+								<input size="10" type="text" name="mn" value="">/
+							</td>
+							<td>
+								<input size="10" type="text" name="yr" value="">
+							</td>
+							
+						</tr>
+					</table>			
+			</fieldset>
+			<input type="submit" name="submit" value="submit">
+			<input type="reset" name="reset" value="reset">
+		</fieldset>
+	</form>
+</body>
+>>>>>>> 0bc40edeb1f9411517a9561dd5fcacf8af493a7e
 </html>
