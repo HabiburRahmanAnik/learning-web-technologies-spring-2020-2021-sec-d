@@ -22,6 +22,7 @@
 			<tr>
 				<td>ID</td>
 				<td>NAME</td>
+				<td>USERNAME</td>
 				<td>EMAIL</td>
 				<td>ACTION</td>
 			</tr>
@@ -29,6 +30,7 @@
 					$users = getAllUser(); 
 					foreach ($users as $value) { echo "<tr>"; ?>
 						<td><?php echo $value['id']; ?></td>
+						<td><?php echo $value['name']; ?></td>
 						<td><?php echo $value['username']; ?></td>
 						<td><?php echo $value['email']; ?></td>
 						<td>
