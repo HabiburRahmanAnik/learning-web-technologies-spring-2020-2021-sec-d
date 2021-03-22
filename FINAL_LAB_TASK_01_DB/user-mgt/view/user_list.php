@@ -25,10 +25,9 @@
 				<td>EMAIL</td>
 				<td>ACTION</td>
 			</tr>
-			<tr>
 				<?php 
 					$users = getAllUser(); 
-					foreach ($users as $value) {?>
+					foreach ($users as $value) { echo "<tr>"; ?>
 						<td><?php echo $value['id']; ?></td>
 						<td><?php echo $value['username']; ?></td>
 						<td><?php echo $value['email']; ?></td>
@@ -37,8 +36,8 @@
 					<a href="../controller/delete.php?id=<?php echo $value['id']; ?>">DELETE</a>
 				</td>
 			
-				<?php }?>	
-			</tr>
+				<?php echo "</tr>";}?>	
+			
 		</table>
 			
 	</div>
