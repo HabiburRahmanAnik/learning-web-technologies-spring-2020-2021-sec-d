@@ -2,6 +2,7 @@
 	
 	$title = "User List Page";
 	include('header.php');
+	require_once('../model/userModel.php');
 
 ?>
 
@@ -25,10 +26,21 @@
 				<td>ACTION</td>
 			</tr>
 			<tr>
-				
+				<?php 
+					$users = getAllUser(); 
+					foreach ($users as $value) {?>
+						<td><?php echo $value['id']; ?></td>
+						<td><?php echo $value['username']; ?></td>
+						<td><?php echo $value['email']; ?></td>
+						<td>
+					<a href="edit.php?id=<?php echo $value['id']; ?>">EDIT</a> |
+					<a href="../controller/delete.php?id=<?php echo $value['id']; ?>">DELETE</a>
+				</td>
+			
+				<?php }?>	
 			</tr>
 		</table>
 			
 	</div>
 
-<?php include('footer.php') ?>
+<?php include('footer.php');?>
