@@ -24,7 +24,7 @@
 
 					 ?></td>
 				<td>
-					<a href="edit.php?id=<?php echo $value['id']; ?>">EDIT</a> |
+					<a href="editProduct.php?id=<?php echo $value['id']; ?>">EDIT</a> |
 					<a href="delete.php?id=<?php echo $value['id']; ?>">DELETE</a>
 				</td>
 			
